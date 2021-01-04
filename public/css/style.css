@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background-color: gainsboro;
+}
+
+nav {
+  height: 80px;
+  background-color: white;
+}
+
+header {
+  padding-top: 15px;
+  height: 60px;
+  font-size: 20px;
+  background-color: white;
+}
+
+#kakaopage_title {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 40px;
+}
+
+#search_window {
+  position: fixed;
+  padding-top: 10px;
+  left: 75%;
+}
+
+#cache_btn {
+  position: fixed;
+  padding-top: 10px;
+  left: 85%;
+}
+
+#distinct {
+  position: fixed;
+  padding-top: 10px;
+  left: 90%;
+}
+
+#login_btn {
+  position: fixed;
+  padding-top: 10px;
+  left: 91%;
+}
+
+.nav-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0;
+  list-style-type: none;
+  font-size: 25px;
+}
+
+.nav-item {
+  padding-top: 15px;
+  width:20%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-item a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
