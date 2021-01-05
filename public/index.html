@@ -3,28 +3,93 @@
   <head>
     <meta charset="UTF-8"></meta>
     <title>카카오페이지</title>
-    <link rel="stylesheet" href="/css/style.css">
-    </style>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/contents.css" />
+    <script type="text/javascript" src="js/category.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/event.js"></script>
   </head>
   <body>
-    <!--div-->
-    <header>
-      <span id="kakaopage_title">kakaopage</span>
-      <span id="search_window"><input type="text"></input></span>
-      <span id="cache_btn">캐시충전</span>
-      <span id="distinct">|</span>
-      <span id="login_btn">로그인</span>
-    </header>
-    <!--navbar-->
-    <nav>
-      <ul class="nav-container">
-        <li class="nav-item">홈</li>
-        <li class="nav-item">웹툰</li>
-        <li class="nav-item">웹소설</li>
-        <li class="nav-item">영화</li>
-        <li class="nav-item">방송</li>
-        <li class="nav-item">책</li> 
-      </ul>
-    </nav>
+    <!--header-->
+    <div class=head>
+      <header>
+        <span class="kakaopage_title">kakaopage</span>
+        <span class="search_window"><input id="search" type="text" ></input></span>
+        <span class="cache_btn">캐시충전</span>
+        <span class="distinct">|</span>
+        <span class="login_btn">로그인</span>
+      </header>
+      <!--categorybar-->
+      <category>
+        <ul class="category_container">
+          <button class="category_btn" onclick="setCategory('home')">홈</button>
+          <button class="category_btn" onclick="setCategory('webtoon')">웹툰</button>
+          <button class="category_btn" onclick="setCategory('webfiction')">웹소설</button>
+          <button class="category_btn" onclick="setCategory('movie')">영화</button>
+          <button class="category_btn" onclick="setCategory('broadcast')">방송</button>
+          <button class="category_btn" onclick="setCategory('book')">책</button>
+        </ul>
+      </category>
+    </div>
+    <!--Contents-->
+    <div class="background">
+      <div id="contents">
+        <div class="genre">
+          <!--genre-->
+          <ul class="genre_container">
+            <button class="genre_btn">홈</button>
+            <button class="genre_btn">요일연재</button>
+            <button class="genre_btn">웹소설</button>
+            <button class="genre_btn">판타지</button>
+            <button class="genre_btn">현판</button>
+            <button class="genre_btn">로맨스</button>
+            <button class="genre_btn">로판</button>
+            <button class="genre_btn">무협</button>
+            <button class="genre_btn">단행본</button>
+          </ul>
+        </div>
+        <!--Banner-->
+        <div class="banner_container">
+          <div class="banner fade">
+            <img src="img/banner1.png" style="width:100%">
+          </div>
+          <div class="banner fade">
+            <img src="img/banner2.png" style="width:100%">
+          </div>
+          <div class="banner fade">
+            <img src="img/banner3.png" style="width:100%">
+          </div>
+          <div class="banner fade">
+            <img src="img/banner4.png" style="width:100%">
+          </div>
+          <a class="prev" onclick="nextBanner(-1)"> </a>
+          <a class="next" onclick="nextBanner(1)"> </a>
+        </div>
+        <!--Dashboard-->
+        <ul class="dashboard_container">
+          <button class="dashboard_btn left_btn">오늘 UP</button>
+          <button class="dashboard_btn center_btn">오늘 신작</button>
+          <button class="dashboard_btn right_btn">오리지널</button>
+        </ul>
+
+        <!--Event-->
+        <div class="event_container">
+          <div class="event fade">
+            <img src="img/event1.png" style="width:100%">
+          </div>
+          <div class="event fade">
+            <img src="img/event2.png" style="width:100%">
+          </div>
+          <div class="event fade">
+            <img src="img/event3.png" style="width:100%">
+          </div>
+          <a class="prev" onclick="nextEvent(-1)"> </a>
+          <a class="next" onclick="nextEvent(1)"> </a>
+        </div>
+        
+      </div>
+    </div>
+    <script>showBanners();</script>
+    <script>nextEvent(0)</script>
   </body>
 </html>
