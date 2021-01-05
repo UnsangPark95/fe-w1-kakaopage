@@ -1,56 +1,72 @@
 body {
   margin: 0;
-  background-color: gainsboro;
+  width: 100%;
 }
 
-nav {
+category {
+  position:fixed;
+  padding-top:60px;
   height: 80px;
-  background-color: white;
 }
 
 header {
+  position:fixed;
   padding-top: 15px;
   height: 60px;
   font-size: 20px;
-  background-color: white;
 }
 
-#kakaopage_title {
+.head {
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  z-index: 2;
+}
+
+.kakaopage_title {
   position: fixed;
   left: 50%;
   transform: translate(-50%);
   font-size: 40px;
 }
 
-#search_window {
+.search_window {
   position: fixed;
-  padding-top: 10px;
+  padding-top: 5px;
   left: 75%;
+  height:30px;
 }
 
-#cache_btn {
+#search {
+  height:30px;
+  border: 2px solid gray;
+  border-radius: 20px;
+}
+
+.cache_btn {
   position: fixed;
   padding-top: 10px;
   left: 85%;
 }
 
-#distinct {
+.distinct {
   position: fixed;
   padding-top: 10px;
   left: 90%;
 }
 
-#login_btn {
+.login_btn {
   position: fixed;
   padding-top: 10px;
   left: 91%;
 }
 
-.nav-container {
+.category_container {
   position: fixed;
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 40%;
   margin-top: 10px;
   left: 50%;
   transform: translate(-50%);
@@ -59,15 +75,42 @@ header {
   font-size: 25px;
 }
 
-.nav-item {
-  padding-top: 15px;
-  width:20%;
-  text-align: center;
-  cursor: pointer;
-}
-
-.nav-item a {
+.category_item a {
   text-align: center;
   text-decoration: none;
   color: white;
+}
+
+.category_btn {
+  cursor: pointer;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.category_btn:hover {
+  box-shadow: 0 80px 0 0 #F7E600 inset
+}
+
+.background {
+  background-color:#eee;
+  width: 100%;
+  height: 2000px;
+  z-index: 1;
+}
+
+#contents {
+  position: relative;
+  width: 40%;
+  left: 50%;
+  text-align: center;
+  margin-left: -20%;
+  padding-top: 60px;
+  font-size: 100px;
+  
 }
