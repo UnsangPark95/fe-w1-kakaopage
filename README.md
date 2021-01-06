@@ -5,19 +5,19 @@
 ## 구조
   app.js : Express  -> pm2
   public  
-    |- index.html  
-    |- js  
-        |- category.js  
-        |- banner.js  
-        |- event.js  
-        |- weektop.js  
-    |- css  
-        |- style.css  
-        |- contents.css  
-    |- img  
-        |- webtoon  
-    |- data  
-        |- webtoon.json  
+  &nbsp;&nbsp;|- index.html  
+  &nbsp;&nbsp;|- js  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- category.js  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- banner.js  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- event.js  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- weektop.js  
+  &nbsp;&nbsp;|- css  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- style.css  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- contents.css  
+  &nbsp;&nbsp;|- img  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- webtoon  
+  &nbsp;&nbsp;|- data  
+  &nbsp;&nbsp;&nbsp;&nbsp;|- webtoon.json  
   
 ## start
   - npm install
