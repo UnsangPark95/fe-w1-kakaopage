@@ -36,6 +36,8 @@
     - 구현
 
 ## 2021-1.6
+  - NavBar 동적 기능 구현
+  - CategoryBar 동적 기능 구현 - 미완
   - 요일별 웹툰 (weektop)
     - View(HTML, CSS) 부분 구현
     - 웹툰 데이터 저장 - data/webtoon.json
