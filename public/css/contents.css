@@ -128,3 +128,141 @@
   position: relative;
   margin-top: -90px;
 }
+
+.weektop_container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  padding: 0;
+  margin-top: -21px;
+  background-color: white;
+}
+
+.weektop_title {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin-top: 0px;
+}
+
+.weektop_week {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.weektop_top {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  padding: 0;
+  margin-top: 120px;
+}
+
+.weektop_rank {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  padding: 0;
+  margin-top: 360px;
+}
+
+.weektop_text {
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  padding-left: 40px;
+  padding-top:18px;
+  font-size: 22px;
+  text-align: left;
+  color: rgb(54, 51, 51)
+}
+
+.weektop_more {
+  position: absolute;
+  height: 60px;
+  width: 15%;
+  padding-right: 20px;
+  margin-left:85%;
+  font-size: 18px;
+  text-align: right;
+  display:table-cell;
+  vertical-align:middle;
+  color: rgb(121, 115, 115);
+  background-color: white;
+  border: 0px;
+}
+
+.weektop_btn {
+  cursor: pointer;
+  position: absolute;
+  width: 12%;
+  height: 60px;
+  clear:both;
+  border: 0px;
+  border-bottom: 1px solid #eee;
+  background-color: rgb(255, 255, 255);
+  font-size: 20%;
+  color:rgb(121, 115, 115)
+}
+
+.mon {
+  margin-left: -340px;
+}
+.tue {
+  margin-left: -255px;
+}
+.wed {
+  margin-left: -170px;
+}
+.thu {
+  margin-left: -85px;
+}
+.fri {
+  margin-left: -5px;
+}
+.sat {
+  margin-left: 80px;
+}
+.sun {
+  margin-left: 165px;
+}
+.fin {
+  margin-left: 250px;
+}
+
+.weektop_list {
+  float: left;
+  height: 220px;
+  width: 17%;
+  margin-left: 2.5%;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.weektop_img {
+  margin-top: 20px;
+  height: 150px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.webtoon_title {
+  width: 100%;
+  height: 20px;
+  margin-top: -23px;
+  font-size: 17px;
+  text-align: left;
+}
+
+.numofwatch {
+  width: 100%;
+  height: 20px;
+  margin-top: 3px;
+  color:rgb(121, 115, 115);
+  font-size: 15px;
+  text-align: left;
+}

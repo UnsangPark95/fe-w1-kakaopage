@@ -114,3 +114,12 @@ header {
   font-size: 100px;
   
 }
+
+#dummy_page {
+  position: absolute;
+  padding-top: 300px;
+  margin-left: 800px;
+  height: 200px;
+  font-size: 50px;
+  text-align: center;
+}

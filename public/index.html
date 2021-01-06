@@ -5,9 +5,6 @@
     <title>카카오페이지</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/contents.css" />
-    <script type="text/javascript" src="js/category.js"></script>
-    <script type="text/javascript" src="js/banner.js"></script>
-    <script type="text/javascript" src="js/event.js"></script>
   </head>
   <body>
     <!--header-->
@@ -22,17 +19,20 @@
       <!--categorybar-->
       <category>
         <ul class="category_container">
-          <button class="category_btn" onclick="setCategory('home')">홈</button>
-          <button class="category_btn" onclick="setCategory('webtoon')">웹툰</button>
-          <button class="category_btn" onclick="setCategory('webfiction')">웹소설</button>
-          <button class="category_btn" onclick="setCategory('movie')">영화</button>
-          <button class="category_btn" onclick="setCategory('broadcast')">방송</button>
-          <button class="category_btn" onclick="setCategory('book')">책</button>
+          <button class="category_btn" id="home">홈</button>
+          <button class="category_btn" id="webtoon">웹툰</button>
+          <button class="category_btn" id="webfiction">웹소설</button>
+          <button class="category_btn" id="movie">영화</button>
+          <button class="category_btn" id="broadcast">방송</button>
+          <button class="category_btn" id="book">책</button>
         </ul>
       </category>
     </div>
     <!--Contents-->
     <div class="background">
+      <div id="dummy_page">
+        <img src='img/dummy.png'><br/>dummy page</img>
+      </div>
       <div id="contents">
         <div class="genre">
           <!--genre-->
@@ -62,8 +62,8 @@
           <div class="banner fade">
             <img src="img/banner4.png" style="width:100%">
           </div>
-          <a class="prev" onclick="nextBanner(-1)"> </a>
-          <a class="next" onclick="nextBanner(1)"> </a>
+          <a class="prev" id="prevBtn"> </a>
+          <a class="next" id="nextBtn"> </a>
         </div>
         <!--Dashboard-->
         <ul class="dashboard_container">
@@ -83,13 +83,89 @@
           <div class="event fade">
             <img src="img/event3.png" style="width:100%">
           </div>
-          <a class="prev" onclick="nextEvent(-1)"> </a>
-          <a class="next" onclick="nextEvent(1)"> </a>
+          <a class="prev" id="eventPrev"> </a>
+          <a class="next" id="eventNext"> </a>
+        </div>
+
+        <!--WeekTop-->
+        <div class="weektop_container">
+          <div class="weektop_title">
+            <div class="weektop_text">요일 연재 TOP</div>
+            <button class="weektop_more">더보기 ></button>
+          </div>
+          <div class="weektop_week">
+              <button class="weektop_btn mon" id="mon">월</button>
+              <button class="weektop_btn tue" id="tue">화</button>
+              <button class="weektop_btn wed" id="wed">수</button>
+              <button class="weektop_btn thu" id="thu">목</button>
+              <button class="weektop_btn fri" id="fri">금</button>
+              <button class="weektop_btn sat" id="sat">토</button>
+              <button class="weektop_btn sun" id="sun">일</button>
+              <button class="weektop_btn fin" id="fin">완결</button>
+          </div>
+          <div class="weektop_top" id="mon">
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+              <div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+          </div>
+          <div class="weektop_rank" id="mon">
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+              <div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+            <li class="weektop_list">
+              <img class="weektop_img" src="./img/banner1.png"></img>
+              <div class="webtoon_title">롱리브더킹</div>
+              <div class="numofwatch"><img src="./img/person.png"> 1234 만명</div>
+            </li>
+          </div>
         </div>
         
       </div>
     </div>
-    <script>showBanners();</script>
-    <script>nextEvent(0)</script>
+    <script type="text/javascript" src="js/category.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/event.js"></script> 
+    <script type="text/javascript" src="js/weektop.js"></script>   
   </body>
 </html>
