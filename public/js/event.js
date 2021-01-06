@@ -1,17 +1,23 @@
 /* eslint-disable no-unused-vars */
 var eventIndex = 0;
 
-function nextEvent(n) {
-  changeEvent(eventIndex += n);
-}
+document.getElementById('eventPrev').addEventListener("click", () => {
+  changeEvent(eventIndex += -1);
+})
 
-function changeEvent(n) {
-  var i;
+document.getElementById('eventNext').addEventListener("click", () => {
+  changeEvent(eventIndex += 1);
+})
+
+const changeEvent = curEvent => {
+  var idx;
   var events = document.getElementsByClassName("event");
-  if (n > events.length) {eventIndex = 1}
-  if (n < 1) {eventIndex = events.length}
-  for (i = 0; i < events.length; i++) {
-      events[i].style.display = "none";
+  if (curEvent > events.length) {eventIndex = 1}
+  if (curEvent < 1) {eventIndex = events.length}
+  for (idx = 0; idx < events.length; idx++) {
+      events[idx].style.display = "none";
   }
   events[eventIndex-1].style.display = "block";
 }
+
+changeEvent(eventIndex);
