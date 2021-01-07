@@ -7,10 +7,10 @@ const jsonFilePath = "../data/webtoon.json";
 
 weekBtns.forEach( btn => {
   btn.addEventListener("click", () => {
-    console.log(btn.id);
     getWebtoonData(btn.id);
-  })
-})
+    weekClickBold(btn.id);
+  });
+});
 
 const readjsonFile = (filePath, callback) => {
   var jsonFile = new XMLHttpRequest();
@@ -78,6 +78,15 @@ const drawWebtoonLayout = () => {
   }
 }
 
+const weekClickBold = (element) => {
+  let ele = document.getElementById(element);
+  weekBtns.forEach( categoryId => {
+    categoryId.style = "font-size:20%";
+  })
+  ele.style = "font-size:22%;font-weight:900";
+}
+
 drawWebtoonLayout();
 getWebtoonData("mon");
+weekClickBold("mon")
 

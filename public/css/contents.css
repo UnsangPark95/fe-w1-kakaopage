@@ -199,14 +199,14 @@
 .weektop_btn {
   cursor: pointer;
   position: absolute;
-  width: 12%;
+  width: 11%;
   height: 60px;
   clear:both;
   border: 0px;
-  border-bottom: 1px solid #eee;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   font-size: 20%;
-  color:rgb(121, 115, 115)
+  color:rgb(121, 115, 115);
+  border-radius: 10px;
 }
 
 .mon {
