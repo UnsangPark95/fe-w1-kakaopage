@@ -100,7 +100,7 @@ header {
 .background {
   background-color:#eee;
   width: 100%;
-  height: 2000px;
+  height: 4000px;
   z-index: 1;
 }
 
@@ -112,7 +112,6 @@ header {
   margin-left: -20%;
   padding-top: 60px;
   font-size: 100px;
-  
 }
 
 #dummy_page {

@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-var request = new XMLHttpRequest();
-
 const weekBtns = document.querySelectorAll("button.weektop_btn");
 const jsonFilePath = "../data/webtoon.json";
 
@@ -13,7 +9,7 @@ weekBtns.forEach( btn => {
 });
 
 const readjsonFile = (filePath, callback) => {
-  var jsonFile = new XMLHttpRequest();
+  let jsonFile = new XMLHttpRequest();
   jsonFile.overrideMimeType("application/json");
   jsonFile.open("GET", filePath, true);
   jsonFile.onreadystatechange = () => {
@@ -26,9 +22,9 @@ const readjsonFile = (filePath, callback) => {
 
 const getWebtoonData = (week) => {
   readjsonFile(jsonFilePath, text => {
-    var data = JSON.parse(text);
-    var top = [];
-    var rank= []
+    let data = JSON.parse(text);
+    let top = [];
+    let rank= []
     data["webtoon"].forEach(webtoon => {
       if(webtoon["week"] == week){
         if(webtoon["top"]) {
@@ -42,7 +38,7 @@ const getWebtoonData = (week) => {
     const webtoonImg = document.querySelectorAll("img.weektop_img");
     const webtoonTitle = document.querySelectorAll("div.webtoon_title");
     const webtoonWatch = document.querySelectorAll("div.numofwatch");
-    var idx=0;
+    let idx=0;
 
     top.forEach(webtoonInfo => {
       webtoonImg[idx].src = encodeURI("./img/webtoon/webtoon" + webtoonInfo[0] + ".png");
@@ -62,7 +58,7 @@ const getWebtoonData = (week) => {
 const drawWebtoonLayout = () => {
   const weekTop = document.getElementById("weektop_top");
   const weekRank = document.getElementById("weektop_rank");
-  for(var idx=0; idx<5; idx++){
+  for(let idx=0; idx<5; idx++){
     weekTop.innerHTML = weekTop.innerHTML + 
             "<li class='weektop_list'>" +
               "<img class='weektop_img' />" +
