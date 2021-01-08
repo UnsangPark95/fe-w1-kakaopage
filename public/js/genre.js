@@ -31,10 +31,10 @@ const hideGenre = (element) => {
 
 const genreClickBold = (element) => {
   let ele = document.getElementById(element);
-  genreBtns.forEach( categoryId => {
-    categoryId.style = "font-size:18%";
+  genreBtns.forEach( genreId => {
+    genreId.className = "genre_btn";
   })
-  ele.style = "font-size:19%;font-weight:900";
+  ele.className = "genre_clicked";
 }
 
 const drawGenreTopLayout = () => {
@@ -94,7 +94,7 @@ const getGenreTop = () => {
       genreInfo[genre].forEach(webtoonInfo => {
         webtoonImg[idx].src = encodeURI("./img/webtoon/webtoon" + webtoonInfo[0] + ".png");
         webtoonTitle[idx].innerHTML = webtoonInfo[1];
-        webtoonWatch[idx].innerHTML = "<img style='height:12px' src='./img/person.png'> " + webtoonInfo[2]/10000 + " 만명"; 
+        webtoonWatch[idx].innerHTML = "<img class='webtoon_img' src='./img/person.png'> " + webtoonInfo[2]/10000 + " 만명"; 
         idx+=1;
       });
     });

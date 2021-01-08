@@ -43,13 +43,13 @@ const getWebtoonData = (week) => {
     top.forEach(webtoonInfo => {
       webtoonImg[idx].src = encodeURI("./img/webtoon/webtoon" + webtoonInfo[0] + ".png");
       webtoonTitle[idx].innerHTML = webtoonInfo[1];
-      webtoonWatch[idx].innerHTML = "<img style='height:12px' src='./img/person.png'> " + webtoonInfo[2]/10000 + " 만명"; 
+      webtoonWatch[idx].innerHTML = "<img class='webtoon_img' src='./img/person.png'> " + webtoonInfo[2]/10000 + " 만명"; 
       idx+=1;
     });
     rank.forEach(webtoonInfo => {
       webtoonImg[idx].src = encodeURI("./img/webtoon/webtoon" + webtoonInfo[0] + ".png");
       webtoonTitle[idx].innerHTML = webtoonInfo[1];
-      webtoonWatch[idx].innerHTML = "<img style='height:12px' src='./img/person.png'> " + webtoonInfo[2]/10000 + " 만명";
+      webtoonWatch[idx].innerHTML = "<img class='webtoon_img' src='./img/person.png'> " + webtoonInfo[2]/10000 + " 만명";
       idx+=1;
     });
   });
@@ -77,9 +77,9 @@ const drawWebtoonLayout = () => {
 const weekClickBold = (element) => {
   let ele = document.getElementById(element);
   weekBtns.forEach( categoryId => {
-    categoryId.style = "font-size:20%";
+    categoryId.className = "weektop_btn " + categoryId.id;
   })
-  ele.style = "font-size:22%;font-weight:900";
+  ele.className = "weektop_clicked " + element;
 }
 
 drawWebtoonLayout();

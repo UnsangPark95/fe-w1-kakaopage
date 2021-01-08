@@ -90,6 +90,19 @@
   background-color: white;
 }
 
+.genre_clicked {
+  cursor: pointer;
+  position: relative;
+  width: 130%;
+  outline: none;
+  border: none;
+  margin-top: 25px;
+  font-size: 19%;
+  font-weight:900;
+  color: gray;
+  background-color: white;
+}
+
 .dashboard_container {
   position: relative;
   display: flex;
@@ -207,6 +220,20 @@
   font-size: 20%;
   color:rgb(121, 115, 115);
   border-radius: 10px;
+}
+
+.weektop_clicked {
+  cursor: pointer;
+  position: absolute;
+  width: 11%;
+  height: 60px;
+  clear:both;
+  border: 0px;
+  background-color: white;
+  color:rgb(121, 115, 115);
+  border-radius: 10px;
+  font-size:22%;
+  font-weight:900
 }
 
 .mon {
@@ -392,4 +419,8 @@
   color:rgb(121, 115, 115);
   font-size: 15px;
   text-align: left;
+}
+
+.webtoon_img {
+  height:12px;
 }
